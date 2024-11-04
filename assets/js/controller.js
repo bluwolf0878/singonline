@@ -1,13 +1,12 @@
-// assets/js/controller.js
-import { getSongs, getCarDetails } from './model.js';
-import { renderSongList, renderSongDetail } from './view.js';
+import { fetchSongs } from './model.js';
+import { renderSongs } from './view.js';
 
-export async function loadSongs() {
-    const songs = await getSongs();
-    renderSongList(songs);
+export async function displaySongs() {
+    const songs = await fetchSongs();
+    renderSongs(songs);
 }
 
-export async function loadCarDetail(carId) {
-    const car = await getCarDetails(carId);
-    renderCarDetail(car);
-}
+// Kald funktionen, når DOM'en er klar
+document.addEventListener('DOMContentLoaded', () => {
+    displaySongs();
+});

@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#songs-container {
+    margin: 20px;
+}
+
+.song-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
