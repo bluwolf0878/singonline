@@ -8,7 +8,7 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 export async function fetchSongs() {
     const { data, error } = await supabase
         .from('albums')
-        .select('title, description, artists(name)')
+        .select('title, description, artists(name), image')
         .order('created_at', { ascending: false })
         .limit(10); // Henter de 10 nyeste sange
 
