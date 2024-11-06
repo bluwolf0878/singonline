@@ -1,3 +1,91 @@
+:root{
+    --main-grey: #232323; 
+    --body-color: #131313;
+    --green-song:#4db039;
+    --hover-nav:#43bd2b;
+    --text-color:#f5f5f5;
+}
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+header img{
+    margin: 1rem;
+    width: 15rem;
+    height: auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-grey);
+    justify-content: space-between;
+}
+nav ul{
+    font-size: 1.5rem;
+    margin: 5rem;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+}
+nav ul li a:hover{
+    color:var(--hover-nav);
+    text-decoration: underline;
+}
+#main-container{
+ background-color:var(--main-grey);
+ margin: 20px;
+ display: flex;
+ flex-direction: column;
+}
+#content{
+   text-align: center;  
+}
+#content p:first-of-type{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+#content p{
+  font-family: "Anuphan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+    font-size: 1.3rem;
+}
+#content h2{
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;      
+    font-size: 3rem;
+}
+#headline{
+    font-family: "Anuphan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin-left: 3rem;
+
+}
+ #songs-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.song-item{
+    text-align: center;
+    background-color: var(--green-song);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-radius: 1rem;
+}
+footer{
+    background-color:var(--main-grey);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer p{
+    margin: 10px;
 }

@@ -18,3 +18,15 @@ export async function fetchSongs() {
     }
     return data;
 }
+export async function fetchtext(id) {
+    const { data, error } = await supabase
+        .from('text')
+        .select('header, content, surjestion')
+        .eq('id',id)
+
+    if (error) {
+        console.error('Error fetching songs:', error);
+        return [];
+    }
+    return data;
+}
