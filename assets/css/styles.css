@@ -7,85 +7,80 @@
 }
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: var(--body-color);
-    color: var(--text-color);
 }
-header img{
-    margin: 1rem;
-    width: 15rem;
-    height: auto;
-}
-header{
-    display: flex;
-    flex-direction: row;
-    background-color: var(--main-grey);
-    justify-content: space-between;
-}
-nav ul{
-    font-size: 1.5rem;
-    margin: 5rem;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 2rem;
-}
-nav ul li a:hover{
-    color:var(--hover-nav);
-    text-decoration: underline;
-}
-#main-container{
- background-color:var(--main-grey);
- margin: 20px;
- display: flex;
- flex-direction: column;
-}
-#content{
-   text-align: center;  
-}
-#content p:first-of-type{
-    margin-left: 10rem;
-    margin-right: 10rem;
-}
-#content p{
-  font-family: "Anuphan", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-    font-size: 1.3rem;
-}
-#content h2{
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;      
-    font-size: 3rem;
-}
-#headline{
-    font-family: "Anuphan", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    margin-left: 3rem;
 
+header {
+    background-color: var(--main-grey);
+    color: var(--text-color);
+    padding: 1rem;
 }
- #songs-container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+
+header h1 {
+    margin: 0;
 }
-.song-item{
-    text-align: center;
-    background-color: var(--green-song);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
     margin-right: 20px;
-    border-radius: 1rem;
 }
-footer{
-    background-color:var(--main-grey);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
 }
-footer p{
-    margin: 10px;
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--main-grey);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 0.5rem;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 0.5rem;
+    background-color: var(--green-song);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--hover-nav);
+}
+
+#songs-container, #songs-list, #artists-list {
+    margin-top: 20px;
+}
+
+#songs-container div, #songs-list div, #artists-list div {
+    background-color: var(--text-color);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#songs-container div:hover, #songs-list div:hover, #artists-list div:hover {
+    background-color: var(--hover-nav);
 }

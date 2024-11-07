@@ -1,30 +1,33 @@
 export function renderSongs(songs) {
-    const songsContainer = document.getElementById('songs-container');
-    songsContainer.innerHTML = ''; // Rydder containeren
-    headline.innerHTML = '<h2>10 tilfældige sange:</h2>'
-
+    const container = document.getElementById('songs-container');
+    container.innerHTML = '';
     songs.forEach(song => {
         const songElement = document.createElement('div');
-        songElement.classList.add('song-item'); // Klasse til styling
-        songElement.innerHTML = `
-            <h3>${song.title} - ${song.artists.name}</h3>
-        `;
-        songsContainer.appendChild(songElement);
+        songElement.innerHTML = `<h3>${song.title}</h3>`;
+        container.appendChild(songElement);
     });
 }
-export function rendertext(text) {
-    
-    const content = document.getElementById('content');
-    content.innerHTML = ''; // Rydder containeren
 
-    text.forEach(text => {
-        
-        const textElement = document.createElement('div')
-        textElement.classList.add('text-item')
-        textElement.innerHTML = `
-        <h2>${text.header}</h2>
-        <p>${text.content}</p>
-        <p>${text.surjestion}</p>`;
-        content.appendChild(textElement);
+export function renderSongList(songs) {
+    const list = document.getElementById('songs-list');
+    list.innerHTML = '';
+    songs.forEach(song => {
+        const songElement = document.createElement('div');
+        songElement.innerHTML = `<h3>${song.title}</h3>`;
+        list.appendChild(songElement);
     });
+}
+
+export function renderArtistList(artists) {
+    const list = document.getElementById('artists-list');
+    list.innerHTML = '';
+    artists.forEach(artist => {
+        const artistElement = document.createElement('div');
+        artistElement.innerHTML = `<h3>${artist.name}</h3>`;
+        list.appendChild(artistElement);
+    });
+}
+
+export function showLoginSuccess() {
+    alert("Login successful!");
 }
