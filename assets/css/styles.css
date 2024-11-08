@@ -5,82 +5,74 @@
     --hover-nav:#43bd2b;
     --text-color:#f5f5f5;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+body{
     background-color: var(--body-color);
-}
-
-header {
-    background-color: var(--main-grey);
     color: var(--text-color);
-    padding: 1rem;
 }
-
-header h1 {
-    margin: 0;
+header{
+    background-color: var(--main-grey);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
-nav ul {
+header ul{
     list-style: none;
-    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin-right: 5rem;
+    font-size: 3rem;
 }
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: var(--text-color);
+header ul li a{
     text-decoration: none;
+    color: var(--text-color);
 }
-
-main {
-    padding: 20px;
+header ul li a:hover{
+    text-decoration: underline;
+    color: var(--hover-nav);
 }
-
-footer {
+main{
     background-color: var(--main-grey);
-    color: var(--text-color);
+    margin: 2rem;
+    border-radius: 2rem;
+}
+#content div h2{
+    font-size: 3rem;
     text-align: center;
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
-
-input[type="text"], input[type="password"] {
-    padding: 0.5rem;
-    width: 250px;
-    margin-bottom: 10px;
+#content div div{
+    font-size: 2rem;
+    text-align: center;
 }
-
-button {
-    padding: 0.5rem;
+#content div p{
+    font-size: 2rem;
+    text-align: center;
+}
+main h2{
+    font-size: 3rem;
+    margin-left: 10rem;
+}
+#songs-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+#songs-container div{
     background-color: var(--green-song);
-    color: var(--text-color);
-    border: none;
-    cursor: pointer;
-}
+    border-radius: 2rem;
+    text-align: center;
 
-button:hover {
-    background-color: var(--hover-nav);
 }
-
-#songs-container, #songs-list, #artists-list {
-    margin-top: 20px;
+footer{
+    background-color: var(--main-grey);
+    display: flex;
+    column-gap: 10rem;
+    justify-content: space-between;
+    font-size: 2rem;
 }
-
-#songs-container div, #songs-list div, #artists-list div {
-    background-color: var(--text-color);
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#songs-container div:hover, #songs-list div:hover, #artists-list div:hover {
-    background-color: var(--hover-nav);
+footer p:first-child{
+    margin-left: 2rem;
 }

@@ -1,20 +1,26 @@
-import { fetchRandomSongs, fetchSongsByTitle, fetchArtistsByName, authenticateUser } from './model.js';
-import { renderSongs, renderSongList, renderArtistList, showLoginSuccess } from './view.js';
+import { fetchRandomSongs, fetchSongs, fetchArtists, authenticateUser, fetchtext } from './model.js';
+import { renderSongs, renderSongList, renderArtistList, showLoginSuccess, rendertext } from './view.js';
 
 export async function displayRandomSongs() {
     const songs = await fetchRandomSongs();
     renderSongs(songs);
 }
 
+export async function displaycontent(id) {
+    const data = await fetchtext(id)
+    // console.log(data);
+    rendertext(data)
+}
+
 export async function searchSongs() {
     const title = document.getElementById('search-song').value;
-    const songs = await fetchSongsByTitle(title);
+    const songs = await fetchSongs();
     renderSongList(songs);
 }
 
 export async function searchArtists() {
     const name = document.getElementById('search-artist').value;
-    const artists = await fetchArtistsByName(name);
+    const artists = await fetchArtists(name, description, image);
     renderArtistList(artists);
 }
 

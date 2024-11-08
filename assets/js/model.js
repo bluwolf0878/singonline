@@ -8,14 +8,19 @@ export async function fetchRandomSongs() {
     const { data, error } = await supabase.from('songs').select('*').limit(10);
     return error ? [] : data;
 }
-
-export async function fetchSongsByTitle(title) {
-    const { data, error } = await supabase.from('songs').select('*').ilike('title', `%${title}%`);
+export async function fetchtext(id) {
+    const { data, error } = await supabase.from('text').select('id,content, surjestion, header').eq('id',id)
+    
     return error ? [] : data;
 }
 
-export async function fetchArtistsByName(name) {
-    const { data, error } = await supabase.from('artists').select('*').ilike('name', `%${name}%`);
+export async function fetchSongs() {
+    const { data, error } = await supabase.from('songs').select('*');
+    return error ? [] : data;
+}
+
+export async function fetchArtists() {
+    const { data, error } = await supabase.from('artists').select('*');
     return error ? [] : data;
 }
 
